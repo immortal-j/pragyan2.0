@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COLOSEUM|Events</title>
+    <link rel="icon" href="../../cms/templates/common/favicon.ico" />
+    <meta name="description" content="Coloseum 2022 " />
+    <meta name="keywords" content="Coloseum 2021,Coloseum " />
+    <meta name="google" content="notranslate" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-SJH35RCT1D"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-SJH35RCT1D");
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <meta http-equiv="Last-Update" content="0000-00-00" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="../../cms/templates/p21list/assets/css/main.css"
+      media="screen, projection"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      #menu-bar {
+        display: none;
+      }
+
+      #injection {
+        display: none;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #022f40;
+        margin: 0;
+      }
+      a:hover {
+        color: #022f40;
+      }
+      a:focus {
+        color: #022f40;
+      }
+      i {
+        vertical-align: middle;
+      }
+      .nav-opener {
+        display: none;
+      }
+      .nav-opener:checked ~ .menu {
+        transform: translate(0%, 0px);
+      }
+      .nav-opener:checked
+        ~ .hamburger-box
+        .hamburger
+        .hamburger__patty:nth-child(1) {
+        transform: translate(0px, 8px) rotate(45deg);
+        background: black;
+        z-index: 100 !important;
+      }
+      .nav-opener:checked
+        ~ .hamburger-box
+        .hamburger
+        .hamburger__patty:nth-child(2) {
+        transform: rotate(45deg);
+        opacity: 0;
+      }
+      .nav-opener:checked
+        ~ .hamburger-box
+        .hamburger
+        .hamburger__patty:nth-child(3) {
+        transform: translate(0px, -16px) rotate(-45deg);
+        background: black;
+        z-index: 100 !important;
+      }
+
+      .hamburger-box {
+        position: absolute;
+        z-index: 100;
+        right: 3.5rem;
+        top: 0.5rem;
+        cursor: pointer;
+        padding: 1.6rem;
+        transition: 0.3s ease-in-out;
+      }
+      .hamburger-box:hover .hamburger__patty:nth-child(1) {
+        transform: translate(-4px, 1px) rotate(-45deg);
+        width: 2rem;
+        z-index: 100 !important;
+      }
+      .hamburger-box:hover .hamburger__patty:nth-child(3) {
+        transform: translate(-4px, -1px) rotate(45deg);
+        width: 2rem;
+        z-index: 100 !important;
+      }
+
+      .hamburger {
+        transform: rotateY(0);
+        position: fixed;
+        z-index: 100 !important;
+      }
+      .hamburger__patty {
+        width: 3rem;
+        height: 0.2rem;
+        margin: 0 0 0.6rem 0;
+        background: #ffffff;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .hamburger__patty:last-child {
+        margin-bottom: 0;
+      }
+
+      .menu {
+        background-color: #ffffff;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(150%);
+        transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+        z-index: 99;
+      }
+
+      .menu__list li a {
+        color: #001a24;
+        display: inline-flex;
+        padding: 0.5rem 0 0.2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        transition: 0.5s;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 3rem;
+      }
+      .menu__list:hover li a {
+        color: #001a24;
+      }
+      .menu__list li:hover a {
+        color: wheat;
+      }
+      .menu__list li a::before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        color: rgba(0, 0, 0, 0.1);
+
+        z-index: -1;
+        opacity: 0;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 500px;
+        transition: letter-spacing 0.5s, left 0.5s;
+      }
+      .menu__list li a:hover:before {
+        content: attr(data-text);
+        opacity: 1;
+
+        position: absolute;
+        /* left: 50%; */
+        top: 0%;
+        /* right: 100%; */
+        letter-spacing: 10px;
+        width: 100vw;
+        height: 100vh;
+        color: #ffffff2a !important;
+      }
+      .menu__list li:nth-child(6n + 1) a:before {
+        background-color: #043045;
+      }
+      .menu__list li:nth-child(6n + 2) a:before {
+        background-color: #043045;
+      }
+      .menu__list li:nth-child(6n + 3) a:before {
+        background-color: #043045;
+      }
+      .menu__list li:nth-child(6n + 4) a:before {
+        background-color: #043045;
+      }
+      .menu__list li:nth-child(6n + 5) a:before {
+        background-color: #043045;
+      }
+      .menu__list li:nth-child(6n + 6) a:before {
+        background-color: #043045;
+      }
+      /* scrollbar */
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <!-- <a href="../index.htm"><img src="../../cms/templates/p21list/assets/images/p21_white.png"></a> -->
+    </div>
+    <div class="header">
+      <img src="../../../cms/templates/p21list/assets/images/events.png" />
+    </div>
+    <!-- <div id="menu-bar"><a href="../index.htm"><div class="cms-menuhead">Home</div></a><div class='div_topnav'><ul class='topnav depth1'>
+<li id="cms-menu-item0"><a href="../initiatives/index.htm"><div class='cms-menuitem'> Initiatives</div></a></li>
+<li id="cms-menu-item1"><a href="../about/index.htm"><div class='cms-menuitem'> About</div></a></li>
+<li id="cms-menu-item2"><a href="../contacts/index.htm"><div class='cms-menuitem'> Contacts</div></a></li>
+<li id="cms-menu-item3"><a href="../backstage/index.htm"><div class='cms-menuitem'> Backstage</div></a></li>
+<li id="cms-menu-item4"><a href="../gl_and_crossfire/index.htm"><div class='cms-menuitem'> GL and Crossfire</div></a></li>
+<li id="cms-menu-item5"><a href="index.htm"><div class='cms-menuitem'> EVENTS</div></a></li>
+<li id="cms-menu-item6"><a href="../sponsors/index.htm"><div class='cms-menuitem'> Sponsors</div></a></li>
+<li id="cms-menu-item7"><a href="../workshops/index.htm"><div class='cms-menuitem'> Workshops</div></a></li>
+<li id="cms-menu-item8"><a href="../patronages/index.htm"><div class='cms-menuitem'> Patronages</div></a></li>
+<li id="cms-menu-item9"><a href="../exhibitions/index.htm"><div class='cms-menuitem'> Exhibitions</div></a></li>
+<li id="cms-menu-item10"><a href="../human_books/index.htm"><div class='cms-menuitem'> Picaso</div></a></li>
+<li id="cms-menu-item11"><a href="../summit/index.htm"><div class='cms-menuitem'> Summit</div></a></li>
+<li id="cms-menu-item12"><a href="../sitemap/index.htm"><div class='cms-menuitem'> SITEMAP</div></a></li>
+<li id="cms-menu-item13"><a href="../terms_and_conditions/index.htm"><div class='cms-menuitem'> Terms and Conditions</div></a></li>
+<li id="cms-menu-item14"><a href="../privacy_policy/index.htm"><div class='cms-menuitem'> Privacy Policy</div></a></li>
+<li id="cms-menu-item15"><a href="../gamescape_bk/index.htm"><div class='cms-menuitem'> Gamescape_bk</div></a></li>
+<li id="cms-menu-item16"><a href="../first_years_subsidy/index.htm"><div class='cms-menuitem'> First Years Subsidy</div></a></li>
+<li id="cms-menu-item17"><a href="../gamescape/index.htm"><div class='cms-menuitem'> Gamescape</div></a></li></ul></div><a href=""><div class="cms-menuhead">EVENTS</div></a><div class='div_topnav'><ul class='topnav depth1'>
+<li id="cms-menu-item0"><a href="manigma/index.htm"><div class='cms-menuitem'> Manigma</div></a></li>
+<li id="cms-menu-item1"><a href="Poster /index.htm"><div class='cms-menuitem'> Poster </div></a></li>
+<li id="cms-menu-item2"><a href="concreate/index.htm"><div class='cms-menuitem'> Concreate</div></a></li>
+<li id="cms-menu-item3"><a href="bytehoc/index.htm"><div class='cms-menuitem'> ByteHoc</div></a></li>
+<li id="cms-menu-item4"><a href="roborex/index.htm"><div class='cms-menuitem'> Roborex</div></a></li>
+<li id="cms-menu-item5"><a href="pandoras_box/index.htm"><div class='cms-menuitem'> Pandora&apos;s Box</div></a></li>
+<li id="cms-menu-item6"><a href="phronesis/index.htm"><div class='cms-menuitem'> Phronesis</div></a></li>
+<li id="cms-menu-item7"><a href="ewitts/index.htm"><div class='cms-menuitem'> eWitts</div></a></li></ul></div></div> -->
+    <input type="checkbox" id="nav" class="nav-opener" />
+    <label class="hamburger-box hamburger-box--menu-closed" for="nav">
+      <div class="hamburger">
+        <div class="hamburger__patty"></div>
+        <div class="hamburger__patty"></div>
+        <div class="hamburger__patty"></div>
+      </div>
+    </label>
+
+    <div class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a class="menu__link" href="/index.html" data-text="Home">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="/home/about/index.html" data-text="About Us">About Us</a></li>
+            <li class="menu__item"><a class="menu__link" href="/home/events/index.html" data-text="Events">Events</a></li>
+        <li class="menu_item">
+          <a class="menu_link" href="#" data-text="Gallery">Gallery</a>
+        </li>
+        <li class="menu_item">
+          <a class="menu_link" href="#" data-text="Our Team">Our Team</a>
+        </li>
+      </ul>
+    </div>
+    <div id="injection">
+      <link
+        href="../../cms/templates/common/response/assets/css/main.css"
+        rel="stylesheet"
+        type="text/css"
+      />Coming Up Soon !!!
+    </div>
+    <div class="content">
+      <div class="cluster-list"></div>
+      <div class="event-list"></div>
+    </div>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../../cms/templates/common/sidenav/assets/css/main.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- <div class="menu-icon"> -->
+    <!-- </div> -->
+    <!-- <div id="mySidenav" class="sidenav">
+            <a href="https://Coloseum.org/21/" id="nav_logo"><img src="../../cms/templates/p21list/assets/images/p21_white.png" style="width: 80%;"></a>
+            <a href="https://Coloseum.org/21/home/about/">About</a>
+        <a target="_blank" href="https://Coloseum.org/21/home/initiatives/">Initiatives</a>
+        <a target-"_blank"="" href="https://Coloseum.org/21/home/human_books/"> Picaso </a>
+        <a target="_blank" href="https://Coloseum.org/21/home/gamescape/">Gamescape</a>
+	    <a target="_blank" href="https://Coloseum.org/21/home/backstage/">Backstage</a>
+	    
+           
+            <a target="_blank" href="https://Coloseum.org/sangam/">Sangam</a>
+            <a target="_blank" href="https://Coloseum.org/ingenium/">Ingenium</a>
+            <a target="_blank" href="https://Coloseum.org/hackathon/">Hackathon</a>
+            <a target="_blank" href="https://Coloseum.org/fusionhack/">FusionHack</a>
+            <a target="_blank" href="https://open.spotify.com/show/7CwMf84FwG3dHQnPm250uJ">Podcast</a>
+            <a target="_blank" href="https://medium.com/Coloseum-blog/">Blog</a>
+            <a target="_blank" href="https://Coloseum.org/pca/">Campus Ambassador</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/sponsors/">Sponsors</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/patronages/">Patronages</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/contacts/">Contacts</a>                        <a href=" login.html">Log in / Sign up</a>
+	<a target="_blank" href="../../cms/templates/common/sidenav/assets/files/privacy.pdf" download="" class="privacy">Privacy Policy</a>
+        </div> -->
+    <script src="../../cms/templates/common/sidenav/assets/scripts/main.js"></script>
+    <script>
+      // let title = "Events";
+      // document.querySelector(".title").innerText = title;
+
+      let header = document.querySelectorAll(".cms-menuhead")[1];
+      if (!header) header = "";
+      else header = header.innerText.trim();
+    </script>
+    <script src="../../cms/templates/p21list/assets/scripts/main.js"></script>
+  </body>
+</html>

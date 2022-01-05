@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COLOSEUM|Workshops</title>
+    <link rel="icon" href="../../../../cms/templates/common/favicon.ico" />
+    <meta name="description" content="Coloseum 2021 " />
+    <meta name="keywords" content="Coloseum 2021,Coloseum " />
+    <meta name="google" content="notranslate" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-SJH35RCT1D"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-SJH35RCT1D");
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <meta http-equiv="Last-Update" content="2021-03-17" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="../../../../cms/templates/p21event/assets/css/main.css"
+      media="screen, projection"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .tabContent {
+        display: none;
+      }
+
+      .active {
+        display: block;
+      }
+
+      #tabList {
+        display: none;
+      }
+
+      #injection > h2 {
+        display: none;
+      }
+
+      #menu-bar {
+        display: none;
+      }
+
+      br {
+        display: none;
+      }
+
+      legend {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cluster">
+      <div class="title"></div>
+      <!-- <div class="logo">
+            <a href="../../../index.htm"><img src="../../../../cms/templates/p21event/assets/images/p21_white.png"></a>
+        </div> -->
+    </div>
+    <div class="header">
+      <div class="header-left" style="margin-left: 2vw">
+        <a href="../../postermaking/poster_presentation/index.html"
+          ><img
+            src="../../../../cms/templates/p21event/assets/images/arrow icon.png"
+        /></a>
+      </div>
+      <div class="event-header"></div>
+      <div
+        class="header-right"
+        style="margin-right: 2vw; transform: rotate(180deg)"
+      >
+        <a href="../../campusxperia/campus_xperia/index.html"
+          ><img
+            src="../../../../cms/templates/p21event/assets/images/arrow icon.png"
+        /></a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content_but_inside">
+        <div id="injection">
+          <link
+            href="../../../../cms/templates/common/response/assets/css/main.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <script type="text/javascript">
+            <var delay = 100;
+            var initialInfo = new Object();
+            $(document).ready(function() {
+            	$('.active').removeClass('active');
+            	activate(41);
+            });
+            $(document).ready(function() {
+                $('.links').find("a").click(function() {
+            		var selid=$(this).attr('id');
+            		var selector = '#tab' + selid;
+            		var page = selector.substr(1,selector.indexOf('_')-1);
+            		var activeClasses = $('.active');
+
+            		for(i=0;i<activeClasses.length;i++) {
+            			var thisid = activeClasses.get(i).id;
+            			if(page == thisid.substr(0,page.length)) {
+            				$('#' + thisid + ' .active').removeClass('active');
+            				$('#' + thisid).removeClass('active');
+            				$('#' + thisid.substr(3,thisid.length) + ' > span').removeClass('tabitemactive');
+            				$('#' + thisid).fadeOut(delay, function() {
+
+            					$(selector).fadeIn(delay).addClass('active');
+            					$('#'+selector.substr(4,selector.length)+' > span').addClass('tabitemactive');
+            					activate(selector.substr(selector.indexOf('_')+1));
+            				});
+            			}
+                    }
+
+                    $('.selected').removeClass('selected');
+                    $(this).addClass('selected');
+
+            		return false;
+            	});
+            });
+            function activate(id) {
+            	if(initialInfo[id]) {
+            		$('#tabContent' + id + '_' + initialInfo[id]).fadeIn(delay);
+            		$('#tabContent' + id + '_' + initialInfo[id]).addClass('active');
+            	}
+            }initialInfo[41] = 42;
+            //-->
+          </script>
+
+          <h2>Workshop</h2>
+          <div class="tabEnvelope">
+            <div id="tabList">
+              <div class="tabElement">
+                <a id="Content41_42" href=" view&navigate=42.html"
+                  ><span class="tabItem" id="cms-tabItem">Description</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content41_142" href=" view&navigate=142.html"
+                  ><span class="tabItem" id="cms-tabItem">Format</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content41_43" href=" view&navigate=43.html"
+                  ><span class="tabItem" id="cms-tabItem">Rules</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content41_44" href=" view&navigate=44.html"
+                  ><span class="tabItem" id="cms-tabItem">Resources</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content41_45" href=" view&navigate=45.html"
+                  ><span class="tabItem" id="cms-tabItem">Contacts</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content41_46" href=" view&navigate=46.html"
+                  ><span class="tabItem" id="cms-tabItem">Registration</span></a
+                >
+              </div>
+            </div>
+            <div class="tabContent active" id="tabContent41_42">
+              <p dir="ltr">
+                AWS Workshop! Let's join the workshop on AWS. In this workshop
+                you can learn more about what services you can get from AWS,
+                including Cloud Computing and Foundational Infrastructure
+                Services AWS. Officially Certified from AWS trainer Mr.
+                P.J.Assudani! Get the full knowledge of AWS and earn National
+                level E-certificates by attending it online.
+              </p>
+
+              <p dir="ltr"><strong>&nbsp;</strong></p>
+
+              <!-- <p dir="ltr"><strong>PRIZE MONEY: INR 18000</strong></p>
+
+<p dir="ltr"><strong>EVENT</strong> <strong>IS</strong> <strong>COMPLETED</strong></p> -->
+            </div>
+            <div class="tabContent" id="tabContent41_142">
+              <p dir="ltr">This event will be conducted through Google Meet.</p>
+
+              <ul>
+                <!-- <li dir="ltr">
+	<p dir="ltr"></p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr"></p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr"></p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr"></p>
+	</li> -->
+              </ul>
+
+              <p>&nbsp;</p>
+
+              <p dir="ltr"></p>
+
+              <ul>
+                <!-- <li dir="ltr">
+	<p dir="ltr">In this round, participants will be given a faulty circuit along with the expected output as an image. They are expected to simulate and debug the circuit and provide the correct output.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">A PDF file containing an image of the correct circuit and correct output should be submitted.</p>
+	</li> -->
+              </ul>
+
+              <p>&nbsp;</p>
+
+              <p dir="ltr"></p>
+
+              <ul></ul>
+            </div>
+            <div class="tabContent" id="tabContent41_43">
+              <p dir="ltr"><strong></strong></p>
+
+              <ul>
+                <li dir="ltr">
+                  <p dir="ltr">Deadline for registration 8 January 2022</p>
+                  <!-- </li>
+	<li dir="ltr">
+	<p dir="ltr">It focuses on engineering students and professionals, building their own embedded system designs and circuits.&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">A team must comprise not more than 3 participants.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">&nbsp;Prior registration on Coloseum&rsquo;s website is required to participate.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Simulation can be done in LTSPICE/PSPICE.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">The decision of the judges is final and binding.</p>
+	</li> -->
+                </li>
+              </ul>
+
+              <p>&nbsp;</p>
+
+              <p dir="ltr"><strong></strong></p>
+
+              <p dir="ltr">&nbsp;</p>
+
+              <ul>
+                <!-- <li dir="ltr">
+	<p dir="ltr">This round will have a time limit of 75 minutes +10 minutes additional time to upload the required files.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Points will be given based on the following factors &ndash;</p>
+	</li> -->
+              </ul>
+            </div>
+            <div class="tabContent" id="tabContent41_44">
+              <p dir="ltr"><strong></strong></p>
+
+              <p dir="ltr"></p>
+
+              <p dir="ltr">Every participant will get E-certificates.</p>
+
+              <p>&nbsp;</p>
+
+              <p dir="ltr">Workshop will be held on 10 January 2022.</p>
+
+              <p>
+                <br />
+                &nbsp;
+              </p>
+            </div>
+            <div class="tabContent" id="tabContent41_45">
+              <ol>
+                <li dir="ltr">
+                  <p dir="ltr">Sakshi Saklani: 7414917527</p>
+                </li>
+                <li dir="ltr">
+                  <p dir="ltr">Prachi Shahu: 8208987796</p>
+                </li>
+                <!-- <li dir="ltr">
+	<p dir="ltr">Garvit :&nbsp;+91 8824450574</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Supritha : +91 7569560133</p>
+	</li> -->
+              </ol>
+            </div>
+            <div class="tabContent" id="tabContent41_46">
+              <div class="cms-error">
+                You must be logged in to fill this form.
+                <a href=" login.html">Click here</a> to login.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="menu-bar">
+          <a href="../index.htm"><div class="cms-menuhead">Workshop</div></a>
+          <div class="div_topnav">
+            <ul class="topnav depth1">
+              <li id="cms-menu-item0">
+                <a href="index.htm"><div class="cms-menuitem">Workshop</div></a>
+              </li>
+              <li id="cms-menu-item1">
+                <a href="../../campusxperia/campus_xperia/index.html"
+                  ><div class="cms-menuitem">Unchained Reaction</div></a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href=""><div class="cms-menuhead">Workshop</div></a>
+          <div class="div_topnav">
+            <ul class="topnav depth1">
+              <li id="cms-menu-item0">
+                <a href="description/index.htm"
+                  ><div class="cms-menuitem">Description</div></a
+                >
+              </li>
+              <li id="cms-menu-item1">
+                <a href="format/index.htm"
+                  ><div class="cms-menuitem">Format</div></a
+                >
+              </li>
+              <li id="cms-menu-item2">
+                <a href="rules/index.htm"
+                  ><div class="cms-menuitem">Rules</div></a
+                >
+              </li>
+              <li id="cms-menu-item3">
+                <a href="resources/index.htm"
+                  ><div class="cms-menuitem">Resources</div></a
+                >
+              </li>
+              <li id="cms-menu-item4">
+                <a href="contacts/index.htm"
+                  ><div class="cms-menuitem">Contacts</div></a
+                >
+              </li>
+              <li id="cms-menu-item5">
+                <a href="registration/index.htm"
+                  ><div class="cms-menuitem">Registration</div></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="event-menu"></div>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../../../../cms/templates/common/sidenav/assets/css/main.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- <div class="menu-icon"> -->
+    <!-- </div> -->
+    <!-- <div id="mySidenav" class="sidenav">
+            <a href="https://Coloseum.org/21/" id="nav_logo"><img src="../../../../cms/templates/p21event/assets/images/p21_white.png" style="width: 80%;"></a>
+            <a href="https://Coloseum.org/21/home/about/">About</a>
+        <a target="_blank" href="https://Coloseum.org/21/home/initiatives/">Initiatives</a>
+        <a target-"_blank"="" href="https://Coloseum.org/21/home/human_books/"> Human Books </a>
+        <a target="_blank" href="https://Coloseum.org/21/home/gamescape/">Gamescape</a>
+	    <a target="_blank" href="https://Coloseum.org/21/home/backstage/">Backstage</a>
+	    
+           
+            <a target="_blank" href="https://Coloseum.org/sangam/">Sangam</a>
+            <a target="_blank" href="https://Coloseum.org/ingenium/">Ingenium</a>
+            <a target="_blank" href="https://Coloseum.org/hackathon/">Hackathon</a>
+            <a target="_blank" href="https://Coloseum.org/fusionhack/">FusionHack</a>
+            <a target="_blank" href="https://open.spotify.com/show/7CwMf84FwG3dHQnPm250uJ">Podcast</a>
+            <a target="_blank" href="https://medium.com/Coloseum-blog/">Blog</a>
+            <a target="_blank" href="https://Coloseum.org/pca/">Campus Ambassador</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/sponsors/">Sponsors</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/patronages/">Patronages</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/contacts/">Contacts</a>                        <a href=" login.html">Log in / Sign up</a>
+	<a target="_blank" href="../../../../cms/templates/common/sidenav/assets/files/privacy.pdf" download="" class="privacy">Privacy Policy</a>
+        </div> -->
+    <script src="../../../../cms/templates/common/sidenav/assets/scripts/main.js"></script>
+    <script>
+      let cluster = document
+        .querySelector("#menu-bar > a:nth-of-type(1) > div")
+        .innerText.toUpperCase();
+      document.querySelector(".title").innerHTML = `
+                <span>${cluster}</span>
+            `;
+
+      let header = document.querySelector("#injection > h2").innerText.trim();
+
+      let currentParent = window.location.href.split("/").slice(-3)[0];
+      if (currentParent === "home") {
+        document.querySelector(".header-left").style.visibility = "hidden";
+        document.querySelector(".header-right").style.visibility = "hidden";
+      }
+
+      let headerData = [];
+      let url;
+      let headerItems = document.querySelectorAll(
+        ".div_topnav:nth-of-type(1) a"
+      );
+      headerItems.forEach((element) => {
+        let isCurrent =
+          header === element.children[0].innerText.trim()
+            ? "header-name"
+            : "header-links";
+
+        headerData.push({
+          key: element.children[0].innerText,
+          url: element.getAttribute("href"),
+          class: isCurrent,
+        });
+      });
+
+      let headerHTMLString = "";
+      headerData.forEach((element, index) => {
+        if (element.class === "header-name") {
+          headerHTMLString = `
+                    <div class="${element.class}">
+                        <a href="${
+                          element.url
+                        }">${element.key.toUpperCase()}</a>
+                    </div>
+                `;
+          if (index - 1 >= 0) {
+            document
+              .querySelector(".header-left a")
+              .setAttribute("href", headerData[index - 1].url);
+          } else {
+            document.querySelector(".header-left img").style.opacity = 0.4;
+          }
+          if (index + 1 < headerData.length) {
+            document
+              .querySelector(".header-right a")
+              .setAttribute("href", headerData[index + 1].url);
+          } else {
+            document.querySelector(".header-right img").style.opacity = 0.4;
+          }
+        }
+      });
+      document.querySelector(".event-header").innerHTML = headerHTMLString;
+      // document.querySelector(".event-header .header-name").scrollIntoView();
+
+      let menuData = [];
+      let menuItems = document.querySelectorAll(".tabElement > a");
+      menuItems.forEach((element) => {
+        menuData.push({
+          key: element.children[0].innerText,
+          id: element.id,
+        });
+      });
+
+      let menuHTMLString = "";
+      menuData.forEach((element, index) => {
+        menuHTMLString += `
+            <div class="links">
+                <a href="" id="${element.id}">${element.key.toUpperCase()}</a>
+            </div>
+            `;
+      });
+      document.querySelector(".event-menu").innerHTML = menuHTMLString;
+
+      let currentTab = document
+        .querySelector(".content .active")
+        .id.split("tab")[1];
+      document
+        .querySelector(".event-menu #" + currentTab)
+        .classList.add("selected");
+      document.querySelector(".event-menu .selected").scrollIntoView();
+
+      document.addEventListener("keydown", (event) => {
+        if (event.keyCode === 39) {
+          document.querySelector(".header-right a").click();
+        }
+        if (event.keyCode === 37) {
+          document.querySelector(".header-left a").click();
+        }
+      });
+    </script>
+  </body>
+</html>

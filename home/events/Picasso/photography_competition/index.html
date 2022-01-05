@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COLOSEUM|Picasso</title>
+    <link rel="icon" href="../../../../cms/templates/common/favicon.ico" />
+    <meta name="description" content="Coloseum 2021 " />
+    <meta name="keywords" content="Coloseum 2021,Coloseum " />
+    <meta name="google" content="notranslate" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-SJH35RCT1D"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-SJH35RCT1D");
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <meta http-equiv="Last-Update" content="2021-03-20" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="../../../../cms/templates/p21event/assets/css/main.css"
+      media="screen, projection"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      .tabContent {
+        display: none;
+      }
+
+      .active {
+        display: block;
+      }
+
+      #tabList {
+        display: none;
+      }
+
+      #injection > h2 {
+        display: none;
+      }
+
+      #menu-bar {
+        display: none;
+      }
+
+      br {
+        display: none;
+      }
+
+      legend {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cluster">
+      <div class="title"></div>
+      <!-- <div class="logo">
+            <a href="../../../index.htm"><img src="../../../../cms/templates/p21event/assets/images/p21_white.png"></a>
+        </div> -->
+    </div>
+    <div class="header">
+      <div class="header-left" style="margin-left: 2vw">
+        <a href="../../ideathon/ideathon/index.html"
+          ><img
+            src="../../../../cms/templates/p21event/assets/images/arrow icon.png"
+        /></a>
+      </div>
+      <div class="event-header"></div>
+      <div
+        class="header-right"
+        style="margin-right: 2vw; transform: rotate(180deg)"
+      >
+        <a href="../../postermaking/poster_presentation/index.html"
+          ><img
+            src="../../../../cms/templates/p21event/assets/images/arrow icon.png"
+        /></a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content_but_inside">
+        <div id="injection">
+          <link
+            href="../../../../cms/templates/common/response/assets/css/main.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <script type="text/javascript">
+            var delay = 100;
+            var initialInfo = new Object();
+            $(document).ready(function () {
+              $(".active").removeClass("active");
+              activate(10);
+            });
+            $(document).ready(function () {
+              $(".links")
+                .find("a")
+                .click(function () {
+                  var selid = $(this).attr("id");
+                  var selector = "#tab" + selid;
+                  var page = selector.substr(1, selector.indexOf("_") - 1);
+                  var activeClasses = $(".active");
+
+                  for (i = 0; i < activeClasses.length; i++) {
+                    var thisid = activeClasses.get(i).id;
+                    if (page == thisid.substr(0, page.length)) {
+                      $("#" + thisid + " .active").removeClass("active");
+                      $("#" + thisid).removeClass("active");
+                      $(
+                        "#" + thisid.substr(3, thisid.length) + " > span"
+                      ).removeClass("tabitemactive");
+                      $("#" + thisid).fadeOut(delay, function () {
+                        $(selector).fadeIn(delay).addClass("active");
+                        $(
+                          "#" + selector.substr(4, selector.length) + " > span"
+                        ).addClass("tabitemactive");
+                        activate(selector.substr(selector.indexOf("_") + 1));
+                      });
+                    }
+                  }
+
+                  $(".selected").removeClass("selected");
+                  $(this).addClass("selected");
+
+                  return false;
+                });
+            });
+            function activate(id) {
+              if (initialInfo[id]) {
+                $("#tabContent" + id + "_" + initialInfo[id]).fadeIn(delay);
+                $("#tabContent" + id + "_" + initialInfo[id]).addClass(
+                  "active"
+                );
+              }
+            }
+            initialInfo[10] = 11;
+            //-->
+          </script>
+          <h2>Picasso</h2>
+          <div class="tabEnvelope">
+            <div id="tabList">
+              <div class="tabElement">
+                <a id="Content10_11" href=" view&navigate=11.html"
+                  ><span class="tabItem" id="cms-tabItem">Description</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content10_137" href=" view&navigate=137.html"
+                  ><span class="tabItem" id="cms-tabItem">Format</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content10_12" href=" view&navigate=12.html"
+                  ><span class="tabItem" id="cms-tabItem">Rules</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content10_13" href=" view&navigate=13.html"
+                  ><span class="tabItem" id="cms-tabItem">FAQ'S</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content10_14" href=" view&navigate=14.html"
+                  ><span class="tabItem" id="cms-tabItem">Contacts</span></a
+                >
+              </div>
+              <div class="tabElement">
+                <a id="Content10_15" href=" view&navigate=15.html"
+                  ><span class="tabItem" id="cms-tabItem">Registration</span></a
+                >
+              </div>
+            </div>
+            <div class="tabContent active" id="tabContent10_11">
+              <p dir="ltr">
+                Picasso "Taking an image, freezing a moment, reveals how rich
+                reality truly is." If you are the one who has got immense
+                passion towards photography and is avidly waiting for a platform
+                to express your skills, Wait no more! Picasso is a theme based
+                photography event in which individual will showcase their
+                creativity using Camera. You can capture your picture either by
+                DSLR or Mobile. Use this event as opportunity. Theme Will be out
+                Soon. Stay tuned.
+              </p>
+
+              <!-- <p><strong>Event is Live Now at:&nbsp;<a href="https://dalal.Coloseum.org">dalal.Coloseum.org&nbsp;</a></strong></p> -->
+
+              <!-- <p>Start date&nbsp;of the event : 3rd April 2021</p> -->
+
+              <!-- <h3 dir="ltr"><strong>Prize Money:&nbsp;INR 20000.</strong></h3> -->
+            </div>
+            <div class="tabContent" id="tabContent10_137">
+              <ul>
+                <li dir="ltr">
+                  <p dir="ltr">This event will contain one round.&nbsp;</p>
+                </li>
+                <li dir="ltr">
+                  <p dir="ltr">
+                    Results of this event will be declare on 15 January 2022 in
+                    online mode.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="tabContent" id="tabContent10_12">
+              <ul>
+                <li dir="ltr">
+                  <p dir="ltr">
+                    Photograph must be generated/captured between 8th to 12th.
+                  </p>
+                </li>
+                <li dir="ltr">
+                  <p dir="ltr">
+                    Genre of Photography will be disclosed on 7th of Jan.
+                  </p>
+                </li>
+                <li dir="ltr">
+                  <p dir="ltr">
+                    No entry will be entertained which do not comes under
+                    COC(vulger,etc)
+                  </p>
+                </li>
+                <!-- <li dir="ltr">
+	<p dir="ltr">The market will often swing wildly - keep a keen eye on the news.&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">A constantly updating market depth will be shown for each stock to help players decide what other players think of that stock.&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">There will be a score called &lsquo;reputation&rsquo;, which is indicative of their behaviour during the game, and the player might receive negative points if it goes too low.&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Phone Verification is used for the identification of unique players.&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Users can watch over a particular stock and get notifications for significant changes in stock.&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr">Users can refer the game to others and get in-game cash rewards</p>
+	</li> -->
+              </ul>
+
+              <p dir="ltr">&nbsp;</p>
+
+              <!-- <h3 dir="ltr"><strong>Judging Criteria&nbsp;</strong></h3> -->
+
+              <!-- <p dir="ltr">The Net Worth of the players at the end of the game will be the key judging criterion. (Net Worth = Cash in hand + Worth of stocks)</p> -->
+            </div>
+            <div class="tabContent" id="tabContent10_13">
+              <h3 dir="ltr"><strong>&nbsp;</strong></h3>
+
+              <!-- <p dir="ltr">Players are expected to climb their way to the top of the leaderboard by making intelligent investments. Players are ranked based on their net worth which is the sum of the liquid cash they own and the net worth of their stocks.&nbsp;</p>
+
+<p dir="ltr">&nbsp;</p> -->
+
+              <h3 dir="ltr"><strong>FAQs</strong></h3>
+
+              <p dir="ltr">Every participant will get E-certificates.</p>
+              <br />
+
+              <p dir="ltr">There will be Exciting Prizes for the winners.</p>
+
+              <p dir="ltr">Results will be declared on 15 th January 2022.</p>
+
+              <!-- <p dir="ltr">You can buy stocks by giving a &lsquo;Bid&rsquo; order for the particular stock. You will receive the stock only if your bid is successful. You are permitted to negotiate for the same stock by sending another bid.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p dir="ltr">3) How can I sell stocks to other players?&nbsp;</p>
+
+<p dir="ltr">You can sell stocks by giving an &lsquo;Ask&rsquo; order for the particular stock. Only when your &lsquo;Ask&rsquo; is successful will you receive the money. However, you can negotiate for the same stock by sending another &lsquo;Ask&rsquo; order.&nbsp;</p>
+
+<p>&nbsp;</p> -->
+
+              <!-- <p dir="ltr">4) What are the types of orders supported by Picasso&rsquo;s exchange?</p>
+
+<p dir="ltr">We support &lsquo;Limit&rsquo;, &lsquo;Market&rsquo; and &lsquo;Stop Loss&rsquo; orders. If you&rsquo;re not sure what these terms mean, worry not. We have provided resources for you to familiarise yourself with these terms.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p dir="ltr">5) Who can participate in Picasso?&nbsp;</p>
+
+<p dir="ltr">Anyone with a valid Coloseum ID can participate. If you don&rsquo;t have a Coloseum ID, please register on the Coloseum website.&nbsp;</p>
+
+<p>&nbsp;</p> -->
+
+              <!-- <p dir="ltr">6) What is the role of bots? Who makes the bots?&nbsp;</p>
+
+<p dir="ltr">The bots are present to provide realistic market fluctuations. They behave like human players - they buy, sell, and mortgage stocks following their own strategies. A large number of these, each different from the other, will give the market a randomness factor. The bots will not have any advantage over human players - they will take their own sweet time to trade stocks. After all, the prize money is only for human players. Also, the bots are designed by us and not the participants.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p dir="ltr">7) Whom should I approach in case of technical problems or queries?&nbsp;</p>
+
+<p dir="ltr">You can always call our managers directly in case of any emergency. Every player will be notified in case of technical difficulties within the Dalal Dashboard under the notification or alert tab. Further instructions will be put up on our main site.</p> -->
+            </div>
+            <div class="tabContent" id="tabContent10_14">
+              <p dir="ltr">For any further queries, contact:</p>
+
+              <p>Yugant Gholase :&nbsp;8856972534</p>
+
+              <p>Aditya Pathak :&nbsp;7507927015</p>
+            </div>
+            <div class="tabContent" id="tabContent10_15">
+              <div class="cms-error">
+                You must be logged in to fill this form.
+                <a href=" login.html">Click here</a> to login.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="menu-bar">
+          <a href="../index.htm"><div class="cms-menuhead">Picasso</div></a>
+          <div class="div_topnav">
+            <ul class="topnav depth1">
+              <li id="cms-menu-item0">
+                <a href="index.htm"><div class="cms-menuitem">Picasso</div></a>
+              </li>
+              <li id="cms-menu-item1">
+                <a href="../../postermaking/poster_presentation/index.html"
+                  ><div class="cms-menuitem">PPL</div></a
+                >
+              </li>
+              <li id="cms-menu-item2">
+                <a href="../../gamengain/valorant_and_bgmi/index.html"
+                  ><div class="cms-menuitem">Beer Factory</div></a
+                >
+              </li>
+              <li id="cms-menu-item3">
+                <a href="../the_ultimate_manager/index.htm"
+                  ><div class="cms-menuitem">The Ultimate Manager</div></a
+                >
+              </li>
+              <li id="cms-menu-item4">
+                <a href="../marketing_hub/index.htm"
+                  ><div class="cms-menuitem">Marketing Hub</div></a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href=""><div class="cms-menuhead">Picasso</div></a>
+          <div class="div_topnav">
+            <ul class="topnav depth1">
+              <li id="cms-menu-item0">
+                <a href="description/index.htm"
+                  ><div class="cms-menuitem">Description</div></a
+                >
+              </li>
+              <li id="cms-menu-item1">
+                <a href="format/index.htm"
+                  ><div class="cms-menuitem">Format</div></a
+                >
+              </li>
+              <li id="cms-menu-item2">
+                <a href="rules/index.htm"
+                  ><div class="cms-menuitem">Rules</div></a
+                >
+              </li>
+              <li id="cms-menu-item3">
+                <a href="resources/index.htm"
+                  ><div class="cms-menuitem">Resources</div></a
+                >
+              </li>
+              <li id="cms-menu-item4">
+                <a href="contacts/index.htm"
+                  ><div class="cms-menuitem">Contacts</div></a
+                >
+              </li>
+              <li id="cms-menu-item5">
+                <a href="registration/index.htm"
+                  ><div class="cms-menuitem">Registration</div></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="event-menu"></div>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="../../../../cms/templates/common/sidenav/assets/css/main.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- <div class="menu-icon">
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="https://Coloseum.org/21/" id="nav_logo"><img src="../../../../cms/templates/p21event/assets/images/p21_white.png" style="width: 80%;"></a>
+            <a href="https://Coloseum.org/21/home/about/">About</a>
+        <a target="_blank" href="https://Coloseum.org/21/home/initiatives/">Initiatives</a>
+        <a target-"_blank"="" href="https://Coloseum.org/21/home/human_books/"> Picasso </a>
+        <a target="_blank" href="https://Coloseum.org/21/home/gamescape/">Gamescape</a>
+	    <a target="_blank" href="https://Coloseum.org/21/home/backstage/">Backstage</a>
+	    
+            
+            <a target="_blank" href="https://Coloseum.org/sangam/">Sangam</a>
+            <a target="_blank" href="https://Coloseum.org/ingenium/">Ingenium</a>
+            <a target="_blank" href="https://Coloseum.org/hackathon/">Hackathon</a>
+            <a target="_blank" href="https://Coloseum.org/fusionhack/">FusionHack</a>
+            <a target="_blank" href="https://open.spotify.com/show/7CwMf84FwG3dHQnPm250uJ">Podcast</a>
+            <a target="_blank" href="https://medium.com/Coloseum-blog/">Blog</a>
+            <a target="_blank" href="https://Coloseum.org/pca/">Campus Ambassador</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/sponsors/">Sponsors</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/patronages/">Patronages</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/contacts/">Contacts</a>                        <a href=" login.html">Log in / Sign up</a>
+	<a target="_blank" href="../../../../cms/templates/common/sidenav/assets/files/privacy.pdf" download="" class="privacy">Privacy Policy</a>
+        </div> -->
+    <script src="../../../../cms/templates/common/sidenav/assets/scripts/main.js"></script>
+    <script>
+      let cluster = document
+        .querySelector("#menu-bar > a:nth-of-type(1) > div")
+        .innerText.toUpperCase();
+      document.querySelector(".title").innerHTML = `
+                <span>${cluster}</span>
+            `;
+
+      let header = document.querySelector("#injection > h2").innerText.trim();
+
+      let currentParent = window.location.href.split("/").slice(-3)[0];
+      if (currentParent === "home") {
+        document.querySelector(".header-left").style.visibility = "hidden";
+        document.querySelector(".header-right").style.visibility = "hidden";
+      }
+
+      let headerData = [];
+      let url;
+      let headerItems = document.querySelectorAll(
+        ".div_topnav:nth-of-type(1) a"
+      );
+      console.log(headerItems);
+      headerItems.forEach((element) => {
+        let isCurrent =
+          header === element.children[0].innerText.trim()
+            ? "header-name"
+            : "header-links";
+
+        headerData.push({
+          key: element.children[0].innerText,
+          url: element.getAttribute("href"),
+          class: isCurrent,
+        });
+      });
+
+      let headerHTMLString = "";
+      headerData.forEach((element, index) => {
+        if (element.class === "header-name") {
+          headerHTMLString = `
+                    <div class="${element.class}">
+                        <a href="${
+                          element.url
+                        }">${element.key.toUpperCase()}</a>
+                    </div>
+                `;
+          if (index - 1 >= 0) {
+            document
+              .querySelector(".header-left a")
+              .setAttribute("href", headerData[index - 1].url);
+          } else {
+            document.querySelector(".header-left img").style.opacity = 0.4;
+          }
+          if (index + 1 < headerData.length) {
+            document
+              .querySelector(".header-right a")
+              .setAttribute("href", headerData[index + 1].url);
+          } else {
+            document.querySelector(".header-right img").style.opacity = 0.4;
+          }
+        }
+      });
+      document.querySelector(".event-header").innerHTML = headerHTMLString;
+      // document.querySelector(".event-header .header-name").scrollIntoView();
+
+      let menuData = [];
+      let menuItems = document.querySelectorAll(".tabElement > a");
+      menuItems.forEach((element) => {
+        menuData.push({
+          key: element.children[0].innerText,
+          id: element.id,
+        });
+      });
+
+      let menuHTMLString = "";
+      menuData.forEach((element, index) => {
+        menuHTMLString += `
+            <div class="links">
+                <a href="" id="${element.id}">${element.key.toUpperCase()}</a>
+            </div>
+            `;
+      });
+      document.querySelector(".event-menu").innerHTML = menuHTMLString;
+
+      let currentTab = document
+        .querySelector(".content .active")
+        .id.split("tab")[1];
+      document
+        .querySelector(".event-menu #" + currentTab)
+        .classList.add("selected");
+      document.querySelector(".event-menu .selected").scrollIntoView();
+
+      document.addEventListener("keydown", (event) => {
+        if (event.keyCode === 39) {
+          document.querySelector(".header-right a").click();
+        }
+        if (event.keyCode === 37) {
+          document.querySelector(".header-left a").click();
+        }
+      });
+    </script>
+  </body>
+</html>

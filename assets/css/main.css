@@ -1,0 +1,1593 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GothamBold";
+  src: url(../fonts/Gotham-Bold.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "GothamUltra";
+  src: url(../fonts/gotham-ultra.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "GothamMedium";
+  src: url(../fonts/GothamMedium.ttf) format("truetype");
+}
+
+html,
+body {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: "GothamUltra";
+  scroll-behavior: smooth;
+  /* background-color: black; */
+  /* background-image: url(../images/preview1.jpg); */
+}
+/* bg */
+.fullscreen-video {
+  position: fixed;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -10;
+}
+
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: -9;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.errMsg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center !important;
+  z-index: 1000 !important;
+  color: white !important;
+}
+
+a {
+  color: #022f40;
+  margin: 0;
+}
+a:hover {
+  color: #022f40;
+}
+a:focus {
+  color: #022f40;
+}
+i {
+  vertical-align: middle;
+}
+.pragyan-logo-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 4vw;
+  bottom: 15vh !important;
+}
+
+.landing-logo {
+  width: 200px;
+}
+.pragyan-theme {
+  color: white;
+  margin: 0px;
+  font-family: "GothamUltra";
+  font-size: 5em;
+  font-weight: 1000;
+}
+
+.metaverse-desk {
+  font-size: 6em !important;
+}
+
+.metaverse-mobile {
+  display: none;
+}
+.p21-fab-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 15vh;
+  right: 3vw;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+}
+
+.p21-fab {
+  width: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s-opener {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  /* visibility: hidden; */
+  display: none;
+  text-align: center;
+  background: #00000094;
+  padding-top: 15px;
+  padding-bottom: 60px;
+  position: relative;
+  width: 74px;
+  bottom: -50px;
+  /* border-radius: 999px; */
+  margin: 0 auto;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+}
+
+.social-media.sm-down {
+  padding-bottom: 0px;
+  /* background-color: transparent; */
+}
+
+.sm-active {
+  visibility: visible !important;
+}
+
+.fab {
+  padding: 1.4vh;
+  color: white;
+  font-size: 1.5em;
+}
+
+.spinner-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333;
+  z-index: 999999;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 728px) {
+  /* .mobile{
+    display: block;
+  }
+  .mobile img{
+    width: 100%;
+  }
+  .desktop{
+    display:none;
+  } */
+
+  /* #social-media {
+    visibility: hidden;
+  } */
+  body,
+  html,
+  #container,
+  .main-container {
+    overflow: hidden !important;
+  }
+  .p21-fab-container {
+    bottom: 13vh !important;
+  }
+  .items-container {
+    flex-direction: column;
+    right: 1vh;
+  }
+
+  .plus-icon {
+    align-self: flex-end;
+  }
+  .menu-items-container {
+    flex-direction: column;
+    align-self: flex-end;
+    align-items: center;
+  }
+
+  .inner-item {
+    font-size: 1em;
+    margin: 2px;
+  }
+
+  .pragyan-logo-container {
+    left: 50%;
+    top: 45%;
+    bottom: initial;
+    transform: translate(-50%, -50%);
+    align-items: center;
+  }
+  .pragyan-logo-container h1 {
+    font-family: "GothamUltra";
+  }
+  .landing-logo {
+    width: 200px;
+  }
+  .pragyan-theme {
+    font-size: 4em;
+    font-weight: 900;
+    margin: 0px;
+  }
+  .metaverse-mobile {
+    display: block;
+    font-size: 3em !important;
+  }
+  .metaverse-desk {
+    display: none;
+  }
+
+  .footer {
+    font-size: 0.7em;
+  }
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 4em;
+  letter-spacing: 0.1em;
+  /* Animation provies a slight random skew. Check bottom of doc
+  for more information on how to random skew. */
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+.glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  /* Creates an initial clip for our glitch. This works in
+  a typical top,right,bottom,left fashion and creates a mask
+  to only show a certain part of the glitch at a time. */
+  clip: rect(44px, 450px, 56px, 0);
+  /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
+  with an alternating animation to keep things fresh. */
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+/* Creates an animation with 20 steaps. For each step, it calculates 
+a percentage for the specific step. It then generates a random clip
+box to be used for the random glitch effect. Also adds a very subtle
+skew to change the 'thickness' of the glitch.*/
+@keyframes glitch-anim {
+  0% {
+    clip: rect(8px, 9999px, 12px, 0);
+    transform: skew(0.53deg);
+  }
+  5% {
+    clip: rect(85px, 9999px, 95px, 0);
+    transform: skew(0.19deg);
+  }
+  10% {
+    clip: rect(14px, 9999px, 95px, 0);
+    transform: skew(0.76deg);
+  }
+  15% {
+    clip: rect(89px, 9999px, 27px, 0);
+    transform: skew(0.93deg);
+  }
+  20% {
+    clip: rect(38px, 9999px, 17px, 0);
+    transform: skew(0.26deg);
+  }
+  25% {
+    clip: rect(99px, 9999px, 51px, 0);
+    transform: skew(0.69deg);
+  }
+  30% {
+    clip: rect(70px, 9999px, 17px, 0);
+    transform: skew(0.54deg);
+  }
+  35% {
+    clip: rect(22px, 9999px, 91px, 0);
+    transform: skew(0.24deg);
+  }
+  40% {
+    clip: rect(85px, 9999px, 50px, 0);
+    transform: skew(0.47deg);
+  }
+  45% {
+    clip: rect(61px, 9999px, 85px, 0);
+    transform: skew(0.1deg);
+  }
+  50% {
+    clip: rect(17px, 9999px, 65px, 0);
+    transform: skew(0.01deg);
+  }
+  55% {
+    clip: rect(33px, 9999px, 33px, 0);
+    transform: skew(0.93deg);
+  }
+  60% {
+    clip: rect(94px, 9999px, 18px, 0);
+    transform: skew(0.7deg);
+  }
+  65% {
+    clip: rect(56px, 9999px, 68px, 0);
+    transform: skew(0.2deg);
+  }
+  70% {
+    clip: rect(36px, 9999px, 69px, 0);
+    transform: skew(0.28deg);
+  }
+  75% {
+    clip: rect(97px, 9999px, 60px, 0);
+    transform: skew(0.47deg);
+  }
+  80% {
+    clip: rect(44px, 9999px, 3px, 0);
+    transform: skew(0.53deg);
+  }
+  85% {
+    clip: rect(99px, 9999px, 2px, 0);
+    transform: skew(0.98deg);
+  }
+  90% {
+    clip: rect(82px, 9999px, 98px, 0);
+    transform: skew(0.84deg);
+  }
+  95% {
+    clip: rect(50px, 9999px, 17px, 0);
+    transform: skew(0.86deg);
+  }
+  100% {
+    clip: rect(15px, 9999px, 32px, 0);
+    transform: skew(0.93deg);
+  }
+}
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(63px, 9999px, 55px, 0);
+    transform: skew(0.41deg);
+  }
+  5% {
+    clip: rect(8px, 9999px, 75px, 0);
+    transform: skew(0.55deg);
+  }
+  10% {
+    clip: rect(66px, 9999px, 10px, 0);
+    transform: skew(0.3deg);
+  }
+  15% {
+    clip: rect(23px, 9999px, 54px, 0);
+    transform: skew(0.61deg);
+  }
+  20% {
+    clip: rect(19px, 9999px, 47px, 0);
+    transform: skew(0.79deg);
+  }
+  25% {
+    clip: rect(87px, 9999px, 15px, 0);
+    transform: skew(0.35deg);
+  }
+  30% {
+    clip: rect(3px, 9999px, 16px, 0);
+    transform: skew(0.1deg);
+  }
+  35% {
+    clip: rect(5px, 9999px, 95px, 0);
+    transform: skew(0.99deg);
+  }
+  40% {
+    clip: rect(56px, 9999px, 94px, 0);
+    transform: skew(0.12deg);
+  }
+  45% {
+    clip: rect(19px, 9999px, 44px, 0);
+    transform: skew(0.67deg);
+  }
+  50% {
+    clip: rect(69px, 9999px, 93px, 0);
+    transform: skew(0.72deg);
+  }
+  55% {
+    clip: rect(26px, 9999px, 35px, 0);
+    transform: skew(0.29deg);
+  }
+  60% {
+    clip: rect(83px, 9999px, 32px, 0);
+    transform: skew(0.78deg);
+  }
+  65% {
+    clip: rect(42px, 9999px, 68px, 0);
+    transform: skew(0.81deg);
+  }
+  70% {
+    clip: rect(41px, 9999px, 30px, 0);
+    transform: skew(0.49deg);
+  }
+  75% {
+    clip: rect(100px, 9999px, 40px, 0);
+    transform: skew(0.61deg);
+  }
+  80% {
+    clip: rect(86px, 9999px, 68px, 0);
+    transform: skew(0.2deg);
+  }
+  85% {
+    clip: rect(38px, 9999px, 27px, 0);
+    transform: skew(0.47deg);
+  }
+  90% {
+    clip: rect(73px, 9999px, 13px, 0);
+    transform: skew(0.61deg);
+  }
+  95% {
+    clip: rect(11px, 9999px, 47px, 0);
+    transform: skew(0.23deg);
+  }
+  100% {
+    clip: rect(11px, 9999px, 53px, 0);
+    transform: skew(0.58deg);
+  }
+}
+@keyframes glitch-skew {
+  0% {
+    transform: skew(-1deg);
+  }
+  10% {
+    transform: skew(-4deg);
+  }
+  20% {
+    transform: skew(5deg);
+  }
+  30% {
+    transform: skew(-1deg);
+  }
+  40% {
+    transform: skew(-2deg);
+  }
+  50% {
+    transform: skew(2deg);
+  }
+  60% {
+    transform: skew(-3deg);
+  }
+  70% {
+    transform: skew(0deg);
+  }
+  80% {
+    transform: skew(-1deg);
+  }
+  90% {
+    transform: skew(4deg);
+  }
+  100% {
+    transform: skew(-4deg);
+  }
+}
+body {
+  background-color: #333;
+}
+.main-container {
+  opacity: 0;
+
+  overflow: hidden;
+  /* z-index: 100 !important; */
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  z-index: 0;
+  /* z-index: 200 !important; */
+}
+.loaded {
+  opacity: 0 !important;
+  transition: 1.5s ease-out;
+}
+#container netflixintro {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  animation-name: zoom-in;
+  animation-delay: 0.5s;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  background-size: 4000px;
+  background-position: -1950px 0;
+}
+#container netflixintro::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #000000;
+  width: 150%;
+  height: 30%;
+  left: -25%;
+  bottom: -27%;
+  border-radius: 50%;
+  z-index: 5;
+  transform-origin: left center;
+  background-size: 4000px;
+  background-position: -1950px 0;
+}
+
+#container netflixintro[letter="T"] {
+  transform-origin: center center;
+}
+#container netflixintro[letter="T"] .helper-1 {
+  width: 19.5%;
+  height: 100%;
+  background-color: rgba(228, 9, 19, 0.5);
+  left: 38%;
+  top: 0;
+  transform: rotate(180deg);
+  animation-name: fading-lumieres-box;
+  animation-duration: 2s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+#container netflixintro[letter="T"] .helper-1 .effect-brush {
+  animation-name: brush-moving;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+#container netflixintro[letter="T"] .helper-1 .effect-brush [class*="fur-"] {
+  bottom: 0;
+  height: 40%;
+}
+#container netflixintro[letter="T"] .helper-2 {
+  width: 17.5%;
+  height: 54%;
+  left: 39%;
+  top: -65px;
+  transform: rotate(270deg);
+  overflow: hidden;
+}
+#container netflixintro[letter="T"] .helper-2 .effect-brush {
+  animation-name: brush-moving;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+#container netflixintro[letter="I"] {
+  transform-origin: center center;
+}
+#container netflixintro[letter="I"] .helper-1 {
+  width: 19.5%;
+  height: 100%;
+  background-color: rgba(228, 9, 19, 0.5);
+  left: 38%;
+  top: 0;
+  transform: rotate(180deg);
+  animation-name: fading-lumieres-box;
+  animation-duration: 2s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+#container netflixintro[letter="I"] .helper-1 .effect-brush {
+  animation-name: brush-moving;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+#container netflixintro[letter="I"] .helper-1 .effect-brush [class*="fur-"] {
+  bottom: 0;
+  height: 40%;
+}
+#container netflixintro [class*="helper-"] {
+  position: absolute;
+}
+#container netflixintro [class*="helper-"] .effect-brush {
+  position: absolute;
+  width: 100%;
+  height: 300%;
+  top: 0;
+  overflow: hidden;
+}
+#container netflixintro [class*="helper-"] .effect-brush::before {
+  display: block;
+  content: "";
+  position: absolute;
+  background-color: #e40913;
+  width: 100%;
+  height: 70%;
+  box-shadow: 0px 0px 29px 24px #e40913;
+}
+#container netflixintro [class*="helper-"] .effect-brush [class*="fur-"] {
+  display: block;
+  position: absolute;
+  bottom: 10%;
+  height: 30%;
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-1 {
+  left: 0%;
+  width: 3.8%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 15%,
+    rgba(0, 0, 0, 0) 81%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-2 {
+  left: 3.8%;
+  width: 2.8%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 10%,
+    rgba(0, 0, 0, 0) 62%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-3 {
+  left: 6.6%;
+  width: 4.8%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 37%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-4 {
+  left: 11.4%;
+  width: 4%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 23%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-5 {
+  left: 15.4%;
+  width: 4%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 15%,
+    rgba(0, 0, 0, 0) 86%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-6 {
+  left: 19.4%;
+  width: 2.5%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 27%,
+    rgba(0, 0, 0, 0) 89%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-7 {
+  left: 21.9%;
+  width: 4%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 20%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-8 {
+  left: 25.9%;
+  width: 2%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-9 {
+  left: 27.9%;
+  width: 4%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 35%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-10 {
+  left: 31.9%;
+  width: 3.5%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 39%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-11 {
+  left: 35.4%;
+  width: 2%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 34%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-12 {
+  left: 37.4%;
+  width: 2.6%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 22%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-13 {
+  left: 40%;
+  width: 6%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 47%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-14 {
+  left: 46%;
+  width: 2%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 36%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-15 {
+  left: 48%;
+  width: 5.5%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 29%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-16 {
+  left: 53.5%;
+  width: 3%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 39%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-17 {
+  left: 56.5%;
+  width: 4.1%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-18 {
+  left: 60.6%;
+  width: 2.4%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 34%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-19 {
+  left: 63%;
+  width: 4%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 47%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-20 {
+  left: 67%;
+  width: 1.5%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 27%,
+    rgba(0, 0, 0, 0) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-21 {
+  left: 68.5%;
+  width: 2.8%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 37%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-22 {
+  left: 71.3%;
+  width: 2.3%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 9%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-23 {
+  left: 73.6%;
+  width: 2.2%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 28%,
+    rgba(0, 0, 0, 0) 92%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-24 {
+  left: 75.8%;
+  width: 1%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 37%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-25 {
+  left: 76.8%;
+  width: 2.1%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 28%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-26 {
+  left: 78.9%;
+  width: 4.1%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 34%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-27 {
+  left: 83%;
+  width: 2.5%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 21%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-28 {
+  left: 85.5%;
+  width: 4.5%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 39%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-29 {
+  left: 90%;
+  width: 2.8%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-30 {
+  left: 92.8%;
+  width: 3.5%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 19%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-brush .fur-31 {
+  left: 96.3%;
+  width: 3.7%;
+  background: linear-gradient(
+    to bottom,
+    #e40913 0%,
+    #e40913 37%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+#container netflixintro [class*="helper-"] .effect-lumieres {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation-name: showing-lumieres;
+  animation-duration: 2s;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres [class*="lamp-"] {
+  position: absolute;
+  display: block;
+  height: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(228, 9, 19, 0.75);
+  background: var(--color);
+}
+#container
+  netflixintro
+  [class*="helper-"]
+  .effect-lumieres
+  [class*="lamp-"]::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  box-shadow: 0px 0px 10px 0px rgba(228, 9, 19, 0.75);
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-1 {
+  --color: #ff0100;
+  z: 6;
+  left: 0.7%;
+  width: 1%;
+  animation-delay: 0.93s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-1::before {
+  left: 182%;
+  animation-delay: 0.11s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-2 {
+  --color: #ffde01;
+  left: 2.2%;
+  width: 1.4%;
+  animation-delay: 1.96s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-2::before {
+  left: 137%;
+  animation-delay: 1.22s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-3 {
+  --color: #ff00cc;
+  left: 5.8%;
+  width: 2.1%;
+  animation-delay: 1.35s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-3::before {
+  left: 6%;
+  animation-delay: 1.6s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-4 {
+  --color: #04fd8f;
+  left: 10.1%;
+  width: 2%;
+  animation-delay: 1.07s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-4::before {
+  left: 91%;
+  animation-delay: 1.61s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-5 {
+  --color: #ff0100;
+  left: 12.9%;
+  width: 1.4%;
+  animation-delay: 1.71s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-5::before {
+  left: 73%;
+  animation-delay: 1.22s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-6 {
+  --color: #ff9600;
+  left: 15.3%;
+  width: 2.8%;
+  animation-delay: 0.2s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-6::before {
+  left: 88%;
+  animation-delay: 0.81s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-7 {
+  --color: #0084ff;
+  left: 21.2%;
+  width: 2.5%;
+  animation-delay: 0.37s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-7::before {
+  left: 114%;
+  animation-delay: 0.08s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-8 {
+  --color: #f84006;
+  left: 25%;
+  width: 2.5%;
+  animation-delay: 1.72s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-8::before {
+  left: 21%;
+  animation-delay: 0.31s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-9 {
+  --color: #ffc601;
+  left: 30.5%;
+  width: 3%;
+  animation-delay: 1.28s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-9::before {
+  left: 78%;
+  animation-delay: 1.82s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-10 {
+  --color: #ff4800;
+  left: 36.3%;
+  width: 3%;
+  animation-delay: 1.63s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-10::before {
+  left: 160%;
+  animation-delay: 0.8s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-11 {
+  --color: #fd0100;
+  left: 41%;
+  width: 2.2%;
+  animation-delay: 1.96s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-11::before {
+  left: 185%;
+  animation-delay: 0.85s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-12 {
+  --color: #01ffff;
+  left: 44.2%;
+  width: 2.6%;
+  animation-delay: 1.3s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-12::before {
+  left: 124%;
+  animation-delay: 0.62s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-13 {
+  --color: #ffc601;
+  left: 51.7%;
+  width: 0.5%;
+  animation-delay: 1.16s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-13::before {
+  left: 162%;
+  animation-delay: 0.98s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-14 {
+  --color: #ffc601;
+  left: 52.1%;
+  width: 1.8%;
+  animation-delay: 0.79s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-14::before {
+  left: 129%;
+  animation-delay: 0.66s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-15 {
+  --color: #0078fe;
+  left: 53.8%;
+  width: 2.3%;
+  animation-delay: 1.12s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-15::before {
+  left: 38%;
+  animation-delay: 1.94s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-16 {
+  --color: #0080ff;
+  left: 57.2%;
+  width: 2%;
+  animation-delay: 1.61s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-16::before {
+  left: 14%;
+  animation-delay: 1.46s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-17 {
+  --color: #ffae01;
+  left: 62.3%;
+  width: 2.9%;
+  animation-delay: 0.76s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-17::before {
+  left: 59%;
+  animation-delay: 1.33s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-18 {
+  --color: #ff00bf;
+  left: 65.8%;
+  width: 1.7%;
+  animation-delay: 1.46s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-18::before {
+  left: 170%;
+  animation-delay: 0.98s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-19 {
+  --color: #a601f4;
+  left: 72.8%;
+  width: 0.8%;
+  animation-delay: 0.53s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-19::before {
+  left: 61%;
+  animation-delay: 0.96s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-20 {
+  --color: #f30b34;
+  left: 74.3%;
+  width: 2%;
+  animation-delay: 0.64s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-20::before {
+  left: 34%;
+  animation-delay: 0.7s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-21 {
+  --color: #ff00bf;
+  left: 79.8%;
+  width: 2%;
+  animation-delay: 1.22s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-21::before {
+  left: 143%;
+  animation-delay: 0.99s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-22 {
+  --color: #04fd8f;
+  left: 78.2%;
+  width: 2%;
+  animation-delay: 1.58s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-22::before {
+  left: 9%;
+  animation-delay: 1.76s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-23 {
+  --color: #01ffff;
+  left: 78.5%;
+  width: 2%;
+  animation-delay: 0.75s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-23::before {
+  left: 197%;
+  animation-delay: 0.17s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-24 {
+  --color: #a201ff;
+  left: 85.3%;
+  width: 1.1%;
+  animation-delay: 1.29s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-24::before {
+  left: 69%;
+  animation-delay: 0.78s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-25 {
+  --color: #ec0014;
+  left: 86.9%;
+  width: 1.1%;
+  animation-delay: 1.58s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-25::before {
+  left: 37%;
+  animation-delay: 0.56s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-26 {
+  --color: #0078fe;
+  left: 88.8%;
+  width: 2%;
+  animation-delay: 0.26s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-26::before {
+  left: 183%;
+  animation-delay: 1.34s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-27 {
+  --color: #ff0036;
+  left: 92.4%;
+  width: 2.4%;
+  animation-delay: 0.46s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-27::before {
+  left: 96%;
+  animation-delay: 0.99s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-28 {
+  --color: #06f98c;
+  left: 96.2%;
+  width: 2.1%;
+  animation-delay: 1.63s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-28::before {
+  left: 130%;
+  animation-delay: 1.75s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-1,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-3,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-5,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-7,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-9,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-11,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-13,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-15,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-17,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-19,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-21,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-23,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-25,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-27 {
+  animation-name: lumieres-moving-left;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-1::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-3::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-5::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-7::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-9::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-11::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-13::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-15::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-17::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-19::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-21::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-23::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-25::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-27::before {
+  animation-name: lumieres-moving-left;
+  animation-duration: 5.5s;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-2,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-4,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-6,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-8,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-10,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-12,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-14,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-16,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-18,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-20,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-22,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-24,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-26,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-28 {
+  animation-name: lumieres-moving-right;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-2::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-4::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-6::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-8::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-10::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-12::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-14::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-16::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-18::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-20::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-22::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-24::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-26::before,
+#container netflixintro [class*="helper-"] .effect-lumieres .lamp-28::before {
+  animation-name: lumieres-moving-right;
+  animation-duration: 5.5s;
+}
+
+@keyframes brush-moving {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes fading-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes lumieres-moving-right {
+  0% {
+    transform: translate(0);
+  }
+  40% {
+    transform: translate(-10px) scaleX(1);
+  }
+  50% {
+    transform: translate(-60px);
+  }
+  100% {
+    transform: translate(-120px) scaleX(3);
+  }
+}
+@keyframes lumieres-moving-left {
+  0% {
+    transform: translate(0);
+  }
+  40% {
+    transform: translate(10px) scaleX(1);
+  }
+  50% {
+    transform: translate(60px);
+  }
+  100% {
+    transform: translate(120px) scaleX(3);
+  }
+}
+@keyframes zoom-in {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(15);
+  }
+}
+@keyframes showing-lumieres {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fading-lumieres-box {
+  0% {
+    background-color: rgba(228, 9, 19, 0.5);
+  }
+  100% {
+    background-color: rgba(228, 9, 19, 0);
+  }
+}
+
+/* main section */
+.main-container {
+  animation-delay: 5s !important;
+  animation: fadein ease 2.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* NAV BAR */
+.nav-opener {
+  display: none;
+}
+.nav-opener:checked ~ .menu {
+  transform: translate(0%, 0px);
+}
+.nav-opener:checked ~ .hamburger-box .hamburger .hamburger__patty:nth-child(1) {
+  transform: translate(0px, 8px) rotate(45deg);
+  background: black;
+  z-index: 100 !important;
+}
+.nav-opener:checked ~ .hamburger-box .hamburger .hamburger__patty:nth-child(2) {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.nav-opener:checked ~ .hamburger-box .hamburger .hamburger__patty:nth-child(3) {
+  transform: translate(0px, -16px) rotate(-45deg);
+  background: black;
+  z-index: 100 !important;
+}
+
+.hamburger-box {
+  position: absolute;
+  z-index: 100;
+  right: 3.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+  padding: 1.6rem;
+  transition: 0.3s ease-in-out;
+}
+.hamburger-box:hover .hamburger__patty:nth-child(1) {
+  transform: translate(-4px, 1px) rotate(-45deg);
+  width: 2rem;
+  z-index: 100 !important;
+}
+.hamburger-box:hover .hamburger__patty:nth-child(3) {
+  transform: translate(-4px, -1px) rotate(45deg);
+  width: 2rem;
+  z-index: 100 !important;
+}
+
+.hamburger {
+  transform: rotateY(0);
+  position: fixed;
+  z-index: 100 !important;
+}
+.hamburger__patty {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0 0 0.6rem 0;
+  background: #ffffff;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger__patty:last-child {
+  margin-bottom: 0;
+}
+
+.menu {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(150%);
+  transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 99;
+}
+
+.menu__list li a {
+  color: #001a24;
+  display: inline-flex;
+  padding: 0.5rem 0 0.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  transition: 0.5s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.menu__list:hover li a {
+  color: #001a24;
+}
+.menu__list li:hover a {
+  color: wheat;
+}
+.menu__list li a::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: rgba(0, 0, 0, 0.1);
+
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: letter-spacing 0.5s, left 0.5s;
+}
+.menu__list li a:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+
+  position: absolute;
+  /* left: 50%; */
+  top: 0%;
+  /* right: 100%; */
+  letter-spacing: 10px;
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff2a !important;
+}
+.menu__list li:nth-child(6n + 1) a:before {
+  background-color: #043045;
+}
+.menu__list li:nth-child(6n + 2) a:before {
+  background-color: #043045;
+}
+.menu__list li:nth-child(6n + 3) a:before {
+  background-color: #043045;
+}
+.menu__list li:nth-child(6n + 4) a:before {
+  background-color: #043045;
+}
+.menu__list li:nth-child(6n + 5) a:before {
+  background-color: #043045;
+}
+.menu__list li:nth-child(6n + 6) a:before {
+  background-color: #043045;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+/* particles */
