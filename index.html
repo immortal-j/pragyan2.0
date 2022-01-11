@@ -1,14 +1,11 @@
-
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Colosseum 12.0</title>
 
-    <link rel="icon" href="./assets/images/logo_white.png">
+    <link rel="icon" href="./assets/images/logo_white.png" />
 
     <meta name="description" content="Lorem Ipsum" />
- 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
@@ -16,42 +13,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- styles -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/brands.css" integrity="sha384-tft2+pObMD7rYFMZlLUziw/8QrQeKHU4GYYvA5jVaggC74ZrYdTASheA2vckPcX5" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/fontawesome.css" integrity="sha384-+pqJl+lfXqeZZHwVRNTbv2+eicpo+1TR/AEzHYYDKfAits/WRK21xLOwzOxZzJEZ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap" rel="stylesheet">
-    <link href="./assets/css/main.css" rel="stylesheet">
-   
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/brands.css"
+      integrity="sha384-tft2+pObMD7rYFMZlLUziw/8QrQeKHU4GYYvA5jVaggC74ZrYdTASheA2vckPcX5"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/fontawesome.css"
+      integrity="sha384-+pqJl+lfXqeZZHwVRNTbv2+eicpo+1TR/AEzHYYDKfAits/WRK21xLOwzOxZzJEZ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/main.css" rel="stylesheet" />
+
     <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          document.getElementById("container").classList.add("loaded");
+        }, 5000);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.addEventListener("touchstart", playVideo);
+        function playVideo() {
+          const video = document.getElementById("myVideo");
+          if (video.playing) {
+          } else {
+            video.play();
+          }
+        }
+      });
+    </script>
+  </head>
 
-        $(document).ready(function() {
- 
-            setTimeout(function(){
-                document.getElementById("container").classList.add("loaded")
-            }, 5000);
-        });
-        
-      </script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            document.body.addEventListener("touchstart", playVideo);
-            function playVideo() {
-                const video = document.getElementById('myVideo');
-                if(video.playing) {
-                } else {
-                    video.play();
-                }
-            }
-        });
-      </script>
-</head>
-
-<body>
-
+  <body>
     <div id="container">
-
-        <netflixintro letter="I">
+      <netflixintro letter="I">
         <div class="helper-1">
-            <div class="effect-brush">
+          <div class="effect-brush">
             <span class="fur-31"></span>
             <span class="fur-30"></span>
             <span class="fur-29"></span>
@@ -83,40 +88,39 @@
             <span class="fur-3"></span>
             <span class="fur-2"></span>
             <span class="fur-1"></span>
-            </div>
-            <div class="effect-lumieres">
-            
+          </div>
+          <div class="effect-lumieres">
             <span class="lamp-2"></span>
-            
+
             <span class="lamp-4"></span>
-            
+
             <span class="lamp-6"></span>
-            
+
             <span class="lamp-8"></span>
-            
+
             <span class="lamp-10"></span>
-        
+
             <span class="lamp-12"></span>
-        
+
             <span class="lamp-14"></span>
-        
+
             <span class="lamp-16"></span>
-        
+
             <span class="lamp-18"></span>
-        
+
             <span class="lamp-20"></span>
-        
+
             <span class="lamp-22"></span>
-        
+
             <span class="lamp-24"></span>
-        
+
             <span class="lamp-26"></span>
-        
+
             <span class="lamp-28"></span>
-            </div>
+          </div>
         </div>
         <div class="helper-2">
-            <div class="effect-brush">
+          <div class="effect-brush">
             <span class="fur-31"></span>
             <span class="fur-30"></span>
             <span class="fur-29"></span>
@@ -148,10 +152,10 @@
             <span class="fur-3"></span>
             <span class="fur-2"></span>
             <span class="fur-1"></span>
-            </div>
+          </div>
         </div>
         <div class="helper-3">
-            <div class="effect-brush">
+          <div class="effect-brush">
             <span class="fur-31"></span>
             <span class="fur-30"></span>
             <span class="fur-29"></span>
@@ -183,10 +187,10 @@
             <span class="fur-3"></span>
             <span class="fur-2"></span>
             <span class="fur-1"></span>
-            </div>
+          </div>
         </div>
         <div class="helper-4">
-            <div class="effect-brush">
+          <div class="effect-brush">
             <span class="fur-31"></span>
             <span class="fur-30"></span>
             <span class="fur-29"></span>
@@ -218,12 +222,12 @@
             <span class="fur-3"></span>
             <span class="fur-2"></span>
             <span class="fur-1"></span>
-            </div>
+          </div>
         </div>
-        </netflixintro>
-        <netflixintro letter="T">
+      </netflixintro>
+      <netflixintro letter="T">
         <div class="helper-1">
-            <div class="effect-brush">
+          <div class="effect-brush">
             <span class="fur-31"></span>
             <span class="fur-30"></span>
             <span class="fur-29"></span>
@@ -255,40 +259,39 @@
             <span class="fur-3"></span>
             <span class="fur-2"></span>
             <span class="fur-1"></span>
-            </div>
-            <div class="effect-lumieres">
+          </div>
+          <div class="effect-lumieres">
             <span class="lamp-1"></span>
-        
+
             <span class="lamp-3"></span>
-        
+
             <span class="lamp-5"></span>
-        
+
             <span class="lamp-7"></span>
-        
+
             <span class="lamp-9"></span>
-            
+
             <span class="lamp-11"></span>
-            
+
             <span class="lamp-13"></span>
-            
+
             <span class="lamp-15"></span>
-            
+
             <span class="lamp-17"></span>
-            
+
             <span class="lamp-19"></span>
-            
+
             <span class="lamp-21"></span>
-            
+
             <span class="lamp-23"></span>
-            
+
             <span class="lamp-25"></span>
-            
+
             <span class="lamp-27"></span>
-            
-            </div>
+          </div>
         </div>
         <div class="helper-2">
-            <div class="effect-brush">
+          <div class="effect-brush">
             <span class="fur-31"></span>
             <span class="fur-30"></span>
             <span class="fur-29"></span>
@@ -320,10 +323,10 @@
             <span class="fur-3"></span>
             <span class="fur-2"></span>
             <span class="fur-1"></span>
-            </div>
+          </div>
         </div>
         <div class="helper-3">
-            <div class="effect-brush">
+          <div class="effect-brush">
             <span class="fur-31"></span>
             <span class="fur-30"></span>
             <span class="fur-29"></span>
@@ -355,10 +358,10 @@
             <span class="fur-3"></span>
             <span class="fur-2"></span>
             <span class="fur-1"></span>
-            </div>
+          </div>
         </div>
         <div class="helper-4">
-            <div class="effect-brush">
+          <div class="effect-brush">
             <span class="fur-31"></span>
             <span class="fur-30"></span>
             <span class="fur-29"></span>
@@ -390,72 +393,101 @@
             <span class="fur-3"></span>
             <span class="fur-2"></span>
             <span class="fur-1"></span>
-            </div>
+          </div>
         </div>
-        </netflixintro>
-
+      </netflixintro>
     </div>
-            
+
     <section class="main-container">
-        <video class="fullscreen-video" id="myVideo" autoplay="autoplay" muted loop>
-            <source src="./assets/images/bgVideo.webm">
-            Your browser does not support the video tag.
-        </video>
+      <video
+        class="fullscreen-video"
+        id="myVideo"
+        autoplay="autoplay"
+        muted
+        loop
+      >
+        <source src="./assets/images/bgVideo.webm" />
+        Your browser does not support the video tag.
+      </video>
 
-        <input type="checkbox" id="nav" class="nav-opener" />
-        <label class="hamburger-box hamburger-box--menu-closed" for="nav">
-            <div class="hamburger">
-            <div class="hamburger__patty"></div>
-            <div class="hamburger__patty"></div>
-            <div class="hamburger__patty"></div>
-            </div>
-        </label>    
-    
-        <div class="menu">
-            <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="/index.html" data-text="Home">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="/home/about/index.html" data-text="About Us">About Us</a></li>
-            <li class="menu__item"><a class="menu__link" href="/home/events/index.html" data-text="Events">Events</a></li>
-            <li class="menu__item"><a class="menu__link" href="#" data-text="Gallery">Gallery</a></li>
-            <li class="menu__item"><a class="menu__link" href="#" data-text="Our Team">Our Team</a></li>
-            </ul>
+      <input type="checkbox" id="nav" class="nav-opener" />
+      <label class="hamburger-box hamburger-box--menu-closed" for="nav">
+        <div class="hamburger">
+          <div class="hamburger__patty"></div>
+          <div class="hamburger__patty"></div>
+          <div class="hamburger__patty"></div>
         </div>
-        
-        <div class="pragyan-logo-container">
-            <div>
-                <img src="./assets/images/logo_white.png" class="landing-logo">
-            </div>
-            <br>
-            <h1 class="pragyan-theme metaverse-desk glitch" data-text="COLOSSEUM">COLOSSEUM</h1>
-            <h1 class="pragyan-theme metaverse-desk  glitch" data-text="12.0">12.0</h1>
-            <!-- <h1 class="pragyan-theme metaverse-mobile  glitch" data-text="THE">THE</h1> -->
-            <h1 class="pragyan-theme metaverse-mobile  glitch" data-text="COLOSSEUM">COLOSSEUM</h1>
-            <h1 class="pragyan-theme metaverse-mobile  glitch" data-text="12.0">12.0</h1>
+      </label>
+
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="/index.html" data-text="Home">Home</a>
+          </li>
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/home/about/index.html"
+              data-text="About Us"
+              >About Us</a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              class="menu__link"
+              href="/home/events/index.html"
+              data-text="Events"
+              >Events</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="pragyan-logo-container">
+        <div>
+          <img src="./assets/images/logo_white.png" class="landing-logo" />
         </div>
-        <div class="p21-fab-container">
-            <div id="social-media" class="social-media sm-down">
-                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                <!-- <a href="https://twitter.com/nitt_pragyan" target="_blank"><i class="fab fa-twitter"></i></a> -->
-                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-                <!-- <a href="https://medium.com/pragyan-blog" target="_blank"><i class="fab fa-medium-m"></i></a>
+        <br />
+        <h1 class="pragyan-theme metaverse-desk glitch" data-text="COLOSSEUM">
+          COLOSSEUM
+        </h1>
+        <h1 class="pragyan-theme metaverse-desk glitch" data-text="12.0">
+          12.0
+        </h1>
+        <!-- <h1 class="pragyan-theme metaverse-mobile  glitch" data-text="THE">THE</h1> -->
+        <h1 class="pragyan-theme metaverse-mobile glitch" data-text="COLOSSEUM">
+          COLOSSEUM
+        </h1>
+        <h1 class="pragyan-theme metaverse-mobile glitch" data-text="12.0">
+          12.0
+        </h1>
+      </div>
+      <div class="p21-fab-container">
+        <div id="social-media" class="social-media sm-down">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <!-- <a href="https://twitter.com/nitt_pragyan" target="_blank"><i class="fab fa-twitter"></i></a> -->
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.youtube.com/" target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <!-- <a href="https://medium.com/pragyan-blog" target="_blank"><i class="fab fa-medium-m"></i></a>
                 <a href="https://in.linkedin.com/company/pragyan.nitt" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
-            </div>
-            <div class="s-opener p21-fab" style="z-index:50;">
-                <img src="./assets/images/icon_semicolon.png" width="20px" >
-            </div>
-        
-    
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap" rel="stylesheet">
-        
-    
-    <script src="./assets/scripts/socialMedia.js"></script>
+        </div>
+        <div class="s-opener p21-fab" style="z-index: 50">
+          <img src="./assets/images/icon_semicolon.png" width="20px" />
+        </div>
 
-</div>
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap"
+          rel="stylesheet"
+        />
 
-
+        <script src="./assets/scripts/socialMedia.js"></script>
+      </div>
     </section>
-
-</body>
-
+  </body>
 </html>
