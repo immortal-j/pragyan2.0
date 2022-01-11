@@ -99,44 +99,52 @@
           <script type="text/javascript">
             var delay = 100;
             var initialInfo = new Object();
-            $(document).ready(function(){
-            	$('.active').removeClass('active');
-            	activate(41);
+            $(document).ready(function () {
+              $(".active").removeClass("active");
+              activate(41);
             });
-            $(document).ready(function() {
-                $('.links').find("a").click(function() {
-            		var selid=$(this).attr('id');
-            		var selector = '#tab' + selid;
-            		var page = selector.substr(1,selector.indexOf('_')-1);
-            		var activeClasses = $('.active');
+            $(document).ready(function () {
+              $(".links")
+                .find("a")
+                .click(function () {
+                  var selid = $(this).attr("id");
+                  var selector = "#tab" + selid;
+                  var page = selector.substr(1, selector.indexOf("_") - 1);
+                  var activeClasses = $(".active");
 
-            		for(i=0;i<activeClasses.length;i++) {
-            			var thisid = activeClasses.get(i).id;
-            			if(page == thisid.substr(0,page.length)) {
-            				$('#' + thisid + ' .active').removeClass('active');
-            				$('#' + thisid).removeClass('active');
-            				$('#' + thisid.substr(3,thisid.length) + ' > span').removeClass('tabitemactive');
-            				$('#' + thisid).fadeOut(delay, function() {
-
-            					$(selector).fadeIn(delay).addClass('active');
-            					$('#'+selector.substr(4,selector.length)+' > span').addClass('tabitemactive');
-            					activate(selector.substr(selector.indexOf('_')+1));
-            				});
-            			}
+                  for (i = 0; i < activeClasses.length; i++) {
+                    var thisid = activeClasses.get(i).id;
+                    if (page == thisid.substr(0, page.length)) {
+                      $("#" + thisid + " .active").removeClass("active");
+                      $("#" + thisid).removeClass("active");
+                      $(
+                        "#" + thisid.substr(3, thisid.length) + " > span"
+                      ).removeClass("tabitemactive");
+                      $("#" + thisid).fadeOut(delay, function () {
+                        $(selector).fadeIn(delay).addClass("active");
+                        $(
+                          "#" + selector.substr(4, selector.length) + " > span"
+                        ).addClass("tabitemactive");
+                        activate(selector.substr(selector.indexOf("_") + 1));
+                      });
                     }
+                  }
 
-                    $('.selected').removeClass('selected');
-                    $(this).addClass('selected');
+                  $(".selected").removeClass("selected");
+                  $(this).addClass("selected");
 
-            		return false;
-            	});
+                  return false;
+                });
             });
             function activate(id) {
-            	if(initialInfo[id]) {
-            		$('#tabContent' + id + '_' + initialInfo[id]).fadeIn(delay);
-            		$('#tabContent' + id + '_' + initialInfo[id]).addClass('active');
-            	}
-            }initialInfo[41] = 42;
+              if (initialInfo[id]) {
+                $("#tabContent" + id + "_" + initialInfo[id]).fadeIn(delay);
+                $("#tabContent" + id + "_" + initialInfo[id]).addClass(
+                  "active"
+                );
+              }
+            }
+            initialInfo[41] = 42;
             //-->
           </script>
 
@@ -304,8 +312,8 @@
             </div>
             <div class="tabContent" id="tabContent41_46">
               <div class="cms-error">
-                You must be logged in to fill this form.
-                <a href=" login.html">Click here</a> to login.
+                Register Now
+                <a href=" https://rcoem.in/anon_evForm.htm?ev=79">Click here</a>
               </div>
             </div>
           </div>
@@ -393,7 +401,7 @@
             <a target="_blank" href="https://Coloseum.org/pca/">Campus Ambassador</a>
             <a target="_blank" href="https://Coloseum.org/21/home/sponsors/">Sponsors</a>
             <a target="_blank" href="https://Coloseum.org/21/home/patronages/">Patronages</a>
-            <a target="_blank" href="https://Coloseum.org/21/home/contacts/">Contacts</a>                        <a href=" login.html">Log in / Sign up</a>
+            <a target="_blank" href="https://Coloseum.org/21/home/contacts/">Contacts</a>                        <a href=" https://rcoem.in/anon_evForm.htm?ev=79">Log in / Sign up</a>
 	<a target="_blank" href="../../../../cms/templates/common/sidenav/assets/files/privacy.pdf" download="" class="privacy">Privacy Policy</a>
         </div> -->
     <script src="../../../../cms/templates/common/sidenav/assets/scripts/main.js"></script>
