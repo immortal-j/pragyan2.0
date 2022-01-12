@@ -11,6 +11,7 @@
   display: none;
   padding: 13px;
   clear: both;
+  font-style: italic;
 }
 .tabElement {
   border: 1px solid black;

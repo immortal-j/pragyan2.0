@@ -30,6 +30,7 @@ div.download_button:hover {
 .tabContent {
   display: none;
   padding: 13px;
+  font-style: italic;
 }
 .tabElement {
   border: 1px solid black;
