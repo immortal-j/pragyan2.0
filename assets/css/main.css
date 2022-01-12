@@ -24,7 +24,7 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  font-family: "GothamUltra";
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   scroll-behavior: smooth;
   /* background-color: black; */
   /* background-image: url(../images/preview1.jpg); */
