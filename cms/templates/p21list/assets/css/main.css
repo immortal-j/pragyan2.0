@@ -17,7 +17,7 @@ html, body {
 }
 
 body {
-    background-image: url("../images/bg.gif");
+    background-image: url("../../../../../assets/images/bg.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
